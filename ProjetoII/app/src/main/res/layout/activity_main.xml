@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#9828b4"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/calculadora"
+        android:layout_width="128dp"
+        android:layout_height="136dp"
+        android:layout_alignStart="@+id/navegador"
+        android:layout_alignTop="@+id/agenda"
+        android:onClick="Calculadora"
+        android:src="@drawable/calculadora"
+        tools:layout_editor_absoluteX="36dp"
+        tools:layout_editor_absoluteY="100dp" />
+
+    <ImageView
+        android:id="@+id/navegador"
+        android:layout_width="128dp"
+        android:layout_height="136dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="100dp"
+        android:layout_marginStart="35dp"
+        android:onClick="Navegador"
+        android:src="@drawable/navegador"
+        tools:layout_editor_absoluteX="219dp"
+        tools:layout_editor_absoluteY="100dp" />
+
+    <ImageView
+        android:id="@+id/agenda"
+        android:layout_width="128dp"
+        android:layout_height="136dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="41dp"
+        android:layout_marginTop="114dp"
+        android:onClick="Agenda"
+        android:src="@drawable/agenda"
+        tools:layout_editor_absoluteX="219dp"
+        tools:layout_editor_absoluteY="258dp" />
+
+    <ImageView
+        android:id="@+id/mapa"
+        android:layout_width="128dp"
+        android:layout_height="136dp"
+        android:layout_alignStart="@+id/agenda"
+        android:layout_alignTop="@+id/navegador"
+        android:onClick="Mapa"
+        android:src="@drawable/mapa"
+        tools:layout_editor_absoluteX="36dp"
+        tools:layout_editor_absoluteY="258dp" />
+</RelativeLayout>

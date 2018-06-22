@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Calculadora">
+
+    <TextView
+        android:id="@+id/valor1"
+        android:layout_width="wrap_content"
+        android:layout_height="15dp"
+        android:layout_alignBaseline="@+id/n1"
+        android:layout_alignStart="@+id/valor2"
+        android:text="Valor 2:"
+        tools:layout_editor_absoluteX="180dp"
+        tools:layout_editor_absoluteY="98dp"
+        android:layout_alignLeft="@+id/valor2" />
+
+    <EditText
+        android:id="@+id/n1"
+        android:layout_width="94dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="88dp"
+        android:ems="10"
+        android:inputType="number"
+        tools:layout_editor_absoluteX="227dp"
+        tools:layout_editor_absoluteY="83dp" />
+
+    <TextView
+        android:id="@+id/valor2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/n2"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="27dp"
+        android:text="Valor 1:"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="98dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="27dp" />
+
+    <EditText
+        android:id="@+id/n2"
+        android:layout_width="94dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:ems="10"
+        android:inputType="number"
+        tools:layout_editor_absoluteX="53dp"
+        tools:layout_editor_absoluteY="83dp" />
+
+
+    <Button
+        android:id="@+id/soma"
+        android:layout_width="51dp"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/porcentagem"
+        android:layout_alignTop="@+id/div"
+        android:onClick="btnSomar"
+        android:text="+"
+        tools:layout_editor_absoluteX="17dp"
+        tools:layout_editor_absoluteY="162dp"
+        android:layout_alignRight="@+id/porcentagem" />
+
+    <Button
+        android:id="@+id/sub"
+        android:layout_width="51dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/soma"
+        android:layout_marginEnd="140dp"
+        android:onClick="btnSub"
+        android:text="-"
+        tools:layout_editor_absoluteX="80dp"
+        tools:layout_editor_absoluteY="162dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="140dp" />
+
+    <Button
+        android:id="@+id/div"
+        android:layout_width="51dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="69dp"
+        android:layout_marginTop="184dp"
+        android:onClick="btnDiv"
+        android:text="/"
+        tools:layout_editor_absoluteX="143dp"
+        tools:layout_editor_absoluteY="162dp"
+        android:layout_alignParentRight="true"
+        tools:ignore="MissingPrefix"
+        android:layout_marginRight="69dp" />
+
+    <Button
+        android:id="@+id/mult"
+        android:layout_width="51dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/soma"
+        android:layout_marginStart="106dp"
+        android:onClick="btnMult"
+        android:text="*"
+        tools:layout_editor_absoluteX="207dp"
+        tools:layout_editor_absoluteY="162dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="106dp" />
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="77dp"
+        android:layout_height="31dp"
+        android:layout_above="@+id/valor1"
+        android:layout_alignStart="@+id/btPercent"
+        app:layout_constraintBottom_toTopOf="@+id/valor1"
+        app:layout_constraintEnd_toEndOf="@+id/btPercent"
+        tools:layout_editor_absoluteX="116dp"
+        tools:layout_editor_absoluteY="317dp"
+        android:layout_alignLeft="@+id/btPercent" />
+
+    <EditText
+        android:id="@+id/percent"
+        android:layout_width="133dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="213dp"
+        android:ems="10"
+        android:inputType="number"
+        tools:layout_editor_absoluteX="94dp"
+        tools:layout_editor_absoluteY="326dp" />
+
+    <Button
+        android:id="@+id/btPercent"
+        android:layout_width="65dp"
+        android:layout_height="38dp"
+        android:layout_above="@+id/porcentagem"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="29dp"
+        android:onClick="btnPercent"
+        android:text="%"
+        tools:layout_editor_absoluteX="240dp"
+        tools:layout_editor_absoluteY="277dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="29dp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/valor1"
+        android:layout_alignTop="@+id/pResult"
+        android:text="Resultado:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/pResult"
+        android:layout_alignLeft="@+id/valor1" />
+
+    <TextView
+        android:id="@+id/pResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/prcValor"
+        android:layout_marginBottom="79dp"
+        android:layout_marginStart="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/soma"
+        android:layout_alignLeft="@+id/prcValor"
+        android:layout_marginLeft="0dp" />
+
+    <EditText
+        android:id="@+id/prcValor"
+        android:layout_width="133dp"
+        android:layout_height="43dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="149dp"
+        android:ems="10"
+        android:inputType="number"
+        tools:layout_editor_absoluteX="94dp"
+        tools:layout_editor_absoluteY="234dp" />
+
+    <TextView
+        android:id="@+id/valorp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/percent"
+        android:layout_alignStart="@+id/valor1"
+        android:text="Valor:"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_alignLeft="@+id/valor1" />
+
+    <TextView
+        android:id="@+id/porcentagem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/prcValor"
+        android:layout_marginEnd="-106dp"
+        android:layout_toStartOf="@+id/mult"
+        android:text="Porcentagem:"
+        app:layout_constraintBaseline_toBaselineOf="@+id/percent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_toLeftOf="@+id/mult"
+        android:layout_marginRight="-106dp" />
+
+
+</RelativeLayout>
